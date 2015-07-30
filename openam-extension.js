@@ -54,11 +54,11 @@
   };
 
   ext.getInput = function(i) {
-    return 'Please enter your ' + authObject.callbacks[i].output.value;
+    return 'Please enter your ' + authObject.callbacks[i].output[0].value;
   };
 
   ext.setInput = function(i, value) {
-    authObject.callbacks[i].input.value = value;
+    authObject.callbacks[i].input[0].value = value;
   };
 
   ext.complete = function() {

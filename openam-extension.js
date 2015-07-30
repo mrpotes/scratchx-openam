@@ -91,7 +91,7 @@
     }).done(function(result) {
       userDetails = result;
       callback(userDetails[attribute]);
-    };
+    });
   };
 
   // Block and block menu descriptions

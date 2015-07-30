@@ -35,7 +35,7 @@
       url: baseAmUrl + '/json/authenticate',
       dataType: 'jsonp',
       type: 'POST',
-      data: authObject,
+      data: JSON.stringify(authObject),
       mimeType: 'application/json',
       success: authenticateResponse
     });

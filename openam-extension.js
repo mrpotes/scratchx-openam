@@ -28,10 +28,11 @@
     authObject = {};
     ext.authenticate();
   };
-  ext.authenticate = function(amUrl) {
+
+  ext.authenticate = function() {
     // Make an AJAX call to the OpenAM authenticate endpoint
     $.ajax({
-      url: amUrl + '/json/authenticate',
+      url: baseAmUrl + '/json/authenticate',
       dataType: 'jsonp',
       type: 'POST',
       data: authObject,
@@ -60,6 +61,14 @@
     authObject.callbacks[i].input.value = value;
   };
 
+  ext.complete = function() {
+    if (complete === true) {
+      complete = false;
+      return true;
+    }
+    return false;
+  };
+
   ext.getDetails = function(attribute, callback) {
     if (userDetails) {
       callback(userDetails[attribute]);
@@ -83,14 +92,6 @@
       userDetails = result;
       callback(userDetails[attribute]);
     };
-  };
-
-  ext.complete = function() {
-    if (complete === true) {
-      complete = false;
-      return true;
-    }
-    return false;
   };
 
   // Block and block menu descriptions

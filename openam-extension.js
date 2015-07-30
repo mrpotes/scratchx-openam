@@ -36,7 +36,7 @@
       dataType: 'json',
       type: 'POST',
       data: JSON.stringify(authObject),
-      mimeType: 'application/json',
+      contentType: 'application/json',
       success: authenticateResponse
     });
   };
@@ -80,7 +80,7 @@
       data: '{}',
       dataType: 'json',
       type: 'POST',
-      mimeType: 'application/json'
+      contentType: 'application/json'
     }).then(null, function(result) {
       return $.ajax({
         url: amUrl + '/json/users/' + result.id,

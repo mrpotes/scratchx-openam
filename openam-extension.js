@@ -104,7 +104,7 @@
       ['', 'set authentication input %n to %s', 'setInput', '', ''],
       ['', 'send authentication details', 'authenticate'],
       ['h', 'authentication complete', 'complete'],
-      ['R', 'get user detail called %s', 'getDetails', 'cn'],
+      ['R', 'get user detail called %s', 'getDetails', 'cn']
     ]
   };
 

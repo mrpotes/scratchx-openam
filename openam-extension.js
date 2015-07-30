@@ -100,7 +100,7 @@
       ['', 'start authentication from %s', 'startAuth', 'http://local.example.com:8080/openam'],
       ['h', 'authentication input needed', 'inputNeeded'],
       ['r', 'get authentication input count', 'getNumberInputs'],
-      ['r', 'get authentication input %n', 'getInput'],
+      ['r', 'get authentication input %n', 'getInput', ''],
       ['', 'set authentication input %n to %s', 'setInput', '', ''],
       ['', 'send authentication details', 'authenticate'],
       ['h', 'authentication complete', 'complete'],

@@ -54,7 +54,7 @@
   };
 
   ext.getInput = function(i) {
-    return 'Please enter your ' + authObject.callbacks[i].output;
+    return 'Please enter your ' + authObject.callbacks[i].output.value;
   };
 
   ext.setInput = function(i, value) {

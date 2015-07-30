@@ -101,7 +101,7 @@
       ['h', 'authentication input needed', 'inputNeeded'],
       ['r', 'get authentication input count', 'getNumberInputs'],
       ['r', 'get authentication input %n', 'getInput'],
-      ['', 'set authentication input %n to %s', 'setInput'],
+      ['', 'set authentication input %n to %s', 'setInput', '', ''],
       ['', 'send authentication details', 'authenticate'],
       ['h', 'authentication complete', 'complete'],
       ['R', 'get user detail called %s', 'getDetails', 'cn'],

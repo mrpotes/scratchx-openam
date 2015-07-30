@@ -33,7 +33,7 @@
     // Make an AJAX call to the OpenAM authenticate endpoint
     $.ajax({
       url: baseAmUrl + '/json/authenticate',
-      dataType: 'jsonp',
+      dataType: 'json',
       type: 'POST',
       data: JSON.stringify(authObject),
       mimeType: 'application/json',
@@ -78,14 +78,14 @@
       url: amUrl + '/json/users?_action=idFromSession',
       headers: { iPlanetDirectoryPro: ssoTokenId },
       data: '{}',
-      dataType: 'jsonp',
+      dataType: 'json',
       type: 'POST',
       mimeType: 'application/json'
     }).then(null, function(result) {
       return $.ajax({
         url: amUrl + '/json/users/' + result.id,
         headers: { iPlanetDirectoryPro: ssoTokenId },
-        dataType: 'jsonp',
+        dataType: 'json',
         type: 'GET'
       })
     }).done(function(result) {

@@ -75,7 +75,7 @@
       return;
     }
     $.ajax({
-      url: amUrl + '/json/users?_action=idFromSession',
+      url: baseAmUrl + '/json/users?_action=idFromSession',
       headers: { iPlanetDirectoryPro: ssoTokenId },
       data: '{}',
       dataType: 'json',
@@ -83,7 +83,7 @@
       contentType: 'application/json'
     }).then(null, function(result) {
       return $.ajax({
-        url: amUrl + '/json/users/' + result.id,
+        url: baseAmUrl + '/json/users/' + result.id,
         headers: { iPlanetDirectoryPro: ssoTokenId },
         dataType: 'json',
         type: 'GET'
